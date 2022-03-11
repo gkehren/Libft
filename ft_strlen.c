@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 18:05:46 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/11 23:34:25 by gkehren          ###   ########.fr       */
+/*   Created: 2022/03/11 23:18:10 by gkehren           #+#    #+#             */
+/*   Updated: 2022/03/11 23:32:05 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
+size_t	ft_strlen(const char *s)
+{
+	int	i;
 
-void	*ft_memset(void *s, int c, size_t n);
-size_t	ft_strlen(const char *s);
-
-#endif
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	return ((size_t)i);
+}
