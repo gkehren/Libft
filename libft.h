@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 18:05:46 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 15:35:53 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/13 15:45:08 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ char	*ft_strdup(const char *s1);
 char	*ft_stpcpy(char *dst, const char *src);
 char	*ft_stpncpy(char *dst, const char *src, size_t len);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 
 #endif
