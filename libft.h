@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 18:05:46 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 16:31:14 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/13 16:33:35 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
