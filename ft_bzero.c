@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 20:11:41 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 21:22:28 by gkehren          ###   ########.fr       */
+/*   Created: 2022/03/13 21:13:09 by gkehren           #+#    #+#             */
+/*   Updated: 2022/03/13 21:22:32 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		c += 32;
-	return (c);
+	int		i;
+	char	*car;
+
+	i = 0;
+	car = (char *)s;
+	while (i < (int)n)
+	{
+		car[i] = '\0';
+		i++;
+	}
+	s = (void *)car;
 }
