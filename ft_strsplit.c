@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:21:38 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/18 22:14:43 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/19 15:14:19 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	**ft_strsplit(char const *s, char c)
 	int		j;
 	int		k;
 
-	tab = (char **)malloc(sizeof(char *) * ft_count_word(s, c) + 1);
+	tab = (char **)ft_memalloc(sizeof(char *) * ft_count_word(s, c) + 1);
 	i = 0;
 	k = 0;
 	while (s[i] != '\0')
@@ -60,7 +60,7 @@ char	**ft_strsplit(char const *s, char c)
 			j = 0;
 			while (s[i + j] != c)
 				j++;
-			tab[k] = (char *)malloc(sizeof(char) * (j + 1));
+			tab[k] = ft_strnew(j);
 			ft_split_word(tab[k], s + i, c);
 			i += j;
 			k++;
