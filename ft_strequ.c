@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:17:47 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/18 17:21:46 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/19 16:15:46 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strequ(char const *s1, char const *s2)
 
 	i = 0;
 	if (!s1 || !s2)
-		return (NULL);
+		return (0);
 	while (s1[i] != '\0' && s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])

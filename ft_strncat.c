@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 15:44:38 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 15:46:06 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/19 16:13:19 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	j = 0;
 	while (s1[i] != '\0')
 		i++;
-	while (s2[j] != '\0' && j < n)
+	while (s2[j] != '\0' && j < (int)n)
 	{
 		s1[i] = s2[j];
 		i++;
