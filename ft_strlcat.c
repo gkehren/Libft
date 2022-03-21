@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 15:47:12 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 16:03:44 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/20 22:20:00 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
+	if (dstsize == 0)
+		return (len_src);
 	while (dst[i] != '\0' && i < dstsize)
 		i++;
 	while (src[j] != '\0' && i < dstsize - 1)

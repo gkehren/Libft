@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:59:51 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/13 22:16:04 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/20 22:09:12 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	temp = (char *)src;
 	temp2 = (char *)dst;
-	while (i < (int)len)
+	if (temp2 > temp)
+		while (len-- > 0)
+			temp2[len] = temp[len];
+	else
 	{
-		temp2[i] = temp[i];
-		i++;
+		while (i < (int)len)
+		{
+			temp2[i] = temp[i];
+			i++;
+		}
 	}
 	return (dst);
 }

@@ -6,13 +6,13 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 15:24:26 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/19 16:13:03 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/20 23:21:36 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_stpncpy(char *dst, const char *src, size_t len)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	int	i;
 

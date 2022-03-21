@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 15:46:14 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/19 15:47:46 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/03/21 01:07:20 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char const *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write(1, "\n", 1);
+	write(fd, &"\n", 1);
 }
