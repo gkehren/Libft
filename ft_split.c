@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:21:38 by gkehren           #+#    #+#             */
-/*   Updated: 2022/04/01 18:51:47 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/04/07 18:35:39 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,22 @@ static void	ft_split_word(char *dest, char const *src, char c)
 static int	ft_count_word(char const *str, char c)
 {
 	int	i;
-	int	count;
+	int	trigger;
 
-	count = 0;
 	i = 0;
-	while (str[i] != '\0')
+	trigger = 0;
+	while (*str)
 	{
-		if (str[i + 1] == c && str[i] != c)
-			count++;
-		i++;
+		if (*str != c && trigger == 0)
+		{
+			trigger = 1;
+			i++;
+		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
 	}
-	return (count);
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)

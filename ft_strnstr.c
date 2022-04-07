@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 16:32:29 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/20 20:06:37 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/04/07 17:19:20 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,23 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	int		j;
-	char	*ptr;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	ptr = 0;
-	if (needle[i] == '\0')
+	if (!haystack || !needle)
+		return (NULL);
+	if (!needle || !needle[0])
 		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < (int)len)
+	while (haystack[i] && i < len)
 	{
-		if (haystack[i] == needle[0])
-		{
-			ptr = (char *)haystack + i;
-			j = 0;
-			while (haystack[i + j] == needle[j] && i + j < (int)len)
-			{
-				if (needle[j + 1] == '\0')
-					return (ptr);
-				j++;
-			}
-			ptr = 0;
-		}
+		j = 0;
+		while (haystack[i + j] && needle[j] && i + j < len
+			&& haystack[i + j] == needle[j])
+			j++;
+		if (!needle[j])
+			return ((char *)(haystack + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

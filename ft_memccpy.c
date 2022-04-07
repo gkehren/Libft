@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:37:27 by gkehren           #+#    #+#             */
-/*   Updated: 2022/03/20 21:57:33 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/04/01 19:12:36 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		temp2[i] = temp[i];
 		if (temp[i] == (char)c)
-			return ((void *)&dst[i + 1]);
+			return ((void *)(dst + i + 1));
 		i++;
 	}
 	return (NULL);
