@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:25:20 by gkehren           #+#    #+#             */
-/*   Updated: 2022/05/05 14:08:30 by gkehren          ###   ########.fr       */
+/*   Updated: 2022/05/05 14:14:33 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		temp2[i] = temp[i];
 		i++;
 	}
-	return (void *)(dst);
+	return ((void *)dst);
 }
