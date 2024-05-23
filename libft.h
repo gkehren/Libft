@@ -6,7 +6,7 @@
 /*   By: gkehren <gkehren@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 18:05:46 by gkehren           #+#    #+#             */
-/*   Updated: 2024/05/05 05:29:48 by gkehren          ###   ########.fr       */
+/*   Updated: 2024/05/23 15:55:02 by gkehren          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 2
+# endif
 
 void	*ft_memset(void *s, int c, size_t n);
 size_t	ft_strlen(const char *s);
@@ -87,5 +91,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*get_next_line(int fd);
 
 #endif
